@@ -7,7 +7,7 @@ This project presents a data visualization of the Asthma Prevlance Compared to A
 - **Course:** INFOSCI 301
 - **Instructor**: Luyao Zhang
 
-##Included Files:
+## Included Files:
 - Final_project_infosci_301.ipynb
    - google colab code 
 - proposal.pdf

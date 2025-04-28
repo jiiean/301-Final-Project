@@ -1,86 +1,106 @@
 # app.py
 from flask import Flask, render_template
 import pandas as pd
-import plotly.graph_objects as go
-import requests
+import plotly.express as px
 
 app = Flask(__name__)
 
-def make_figure():
-    # Simulated data
-    data = pd.DataFrame({
-        'county_name': [
-            'Baltimore City', 'Montgomery County', "Prince George's County",
-            'Howard County', 'Anne Arundel County', 'Allegany County',
-            'Harford County', 'Charles County', 'Frederick County',
-            'Wicomico County'
-        ],
-        'fips': ['24510','24031','24033','24027','24003','24001','24025','24017','24021','24045'],
-        'ozone_level': [35,28,31,22,29,20,24,27,25,30],
-        'asthma_rate': [11.2,7.9,10.5,6.8,8.3,13.0,9.1,10.0,7.5,12.1]
-    })
-
-    # Load counties geojson
-    geojson_url = "https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json"
-    geojson = requests.get(geojson_url).json()
-
-    fig = go.Figure()
-
-    # Asthma choropleth
-    fig.add_choropleth(
-        geojson=geojson,
-        locations=data.fips,
-        z=data.asthma_rate,
-        colorscale="Reds",
-        zmin=5, zmax=15,
-        colorbar_title="Asthma %",
-        visible=True,
-        hovertext=data.county_name + '<br>O₃: ' + data.ozone_level.astype(str) + ' ppb',
-        hoverinfo='text'
-    )
-
-    # Ozone choropleth
-    fig.add_choropleth(
-        geojson=geojson,
-        locations=data.fips,
-        z=data.ozone_level,
-        colorscale="Blues",
-        zmin=20, zmax=40,
-        colorbar_title="Ozone (ppb)",
-        visible=False,
-        hovertext=data.county_name + '<br>Asthma: ' + data.asthma_rate.astype(str) + '%',
-        hoverinfo='text'
-    )
-
-    # Toggle buttons
-    fig.update_layout(
-        updatemenus=[{
-            "type": "buttons", "direction": "right",
-            "x": 0.5, "y": 1.15, "xanchor": "center", "yanchor": "top",
-            "buttons": [
-                {
-                    "label": "🌬️ Asthma",
-                    "method": "update",
-                    "args":[{"visible":[True,False]}, {"title":"Asthma Rates in Maryland Counties"}]
-                },
-                {
-                    "label": "☁️ Ozone",
-                    "method": "update",
-                    "args":[{"visible":[False,True]}, {"title":"Ozone Levels in Maryland Counties"}]
-                }
-            ]
-        }],
-        title_text="Environmental & Health Indicators in Maryland Counties",
-        geo_scope="usa"
-    )
-
-    # return HTML div
-    return fig.to_html(full_html=False, include_plotlyjs='cdn')
-
-@app.route("/")
+@app.route('/')
 def index():
-    plot_div = make_figure()
-    return render_template("index.html", plot_div=plot_div)
+    # --- 1. Load & preprocess CDC asthma data ---
+    ast = pd.read_csv('tableL6.csv')
+    ast = ast[ast['Sample Sizec'].astype(str).str.isdigit()]
+    ast = ast.rename(columns={
+        'Sample Sizec': 'sample_size',
+        'Prevalence (Percent)': 'prevalence'
+    })
+    ast['sample_size'] = ast['sample_size'].astype(int)
+    ast['prevalence'] = ast['prevalence'].astype(float)
+    state_prev = (
+        ast.groupby('State')
+           .apply(lambda g: (g['prevalence']*g['sample_size']).sum()/g['sample_size'].sum())
+           .reset_index(name='weighted_prevalence')
+    )
+    abbr = {
+      'Alabama':'AL','Alaska':'AK','Arizona':'AZ','Arkansas':'AR','California':'CA',
+      'Colorado':'CO','Connecticut':'CT','Delaware':'DE','Florida':'FL','Georgia':'GA',
+      'Hawaii':'HI','Idaho':'ID','Illinois':'IL','Indiana':'IN','Iowa':'IA','Kansas':'KS',
+      'Kentucky':'KY','Louisiana':'LA','Maine':'ME','Maryland':'MD','Massachusetts':'MA',
+      'Michigan':'MI','Minnesota':'MN','Mississippi':'MS','Missouri':'MO','Montana':'MT',
+      'Nebraska':'NE','Nevada':'NV','New Hampshire':'NH','New Jersey':'NJ','New Mexico':'NM',
+      'New York':'NY','North Carolina':'NC','North Dakota':'ND','Ohio':'OH','Oklahoma':'OK',
+      'Oregon':'OR','Pennsylvania':'PA','Rhode Island':'RI','South Carolina':'SC',
+      'South Dakota':'SD','Tennessee':'TN','Texas':'TX','Utah':'UT','Vermont':'VT',
+      'Virginia':'VA','Washington':'WA','West Virginia':'WV','Wisconsin':'WI','Wyoming':'WY'
+    }
+    state_prev['state_code'] = state_prev['State'].map(abbr)
+    state_prev.dropna(subset=['state_code'], inplace=True)
 
-if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000)
+    # --- 2. Choropleth: Asthma Prevalence ---
+    fig1 = px.choropleth(
+        state_prev,
+        locations='state_code',
+        locationmode='USA-states',
+        color='weighted_prevalence',
+        color_continuous_scale='Reds',
+        scope='usa',
+        labels={'weighted_prevalence':'Asthma %'},
+        title='📊 2021 Adult Asthma Prevalence by State'
+    )
+
+    # --- 3. Load & preprocess OpenAQ data ---
+    aq = pd.read_csv('openaq.csv', sep=';')
+    aq[['latitude','longitude']] = aq['Coordinates'].str.split(',', expand=True).astype(float)
+    aq['timestamp'] = pd.to_datetime(aq['Last Updated'], errors='coerce')
+    us_o3 = aq[
+        (aq['Country Code']=='US') &
+        (aq['Pollutant']=='O3') &
+        (aq['Value']>0)
+    ].copy()
+
+    # --- 4. Scatter‐Geo: O₃ Sensor Readings ---
+    fig2 = px.scatter_geo(
+        us_o3,
+        lat='latitude',
+        lon='longitude',
+        color='Value',
+        size='Value',
+        color_continuous_scale='Viridis',
+        scope='usa',
+        labels={'Value':'Ozone (µg/m³)'},
+        hover_name='Location',
+        hover_data={'City':True,'Value':':.1f'},
+        title='🗺 2024 US Ozone Sensor Measurements'
+    )
+
+    # --- 5. Time Series: Monthly Avg O₃ Trend ---
+    us_o3['month'] = us_o3['timestamp'].dt.to_period('M').dt.to_timestamp()
+    monthly = (
+        us_o3.groupby('month')['Value']
+             .mean()
+             .reset_index(name='avg_o3')
+    )
+    fig3 = px.line(
+        monthly,
+        x='month',
+        y='avg_o3',
+        markers=True,
+        labels={'month':'Month','avg_o3':'Avg Ozone (µg/m³)'},
+        title='📈 Monthly Avg. US Ozone Concentration (2024)'
+    )
+    last = monthly.iloc[-1]
+    fig3.add_annotation(
+        x=last['month'], y=last['avg_o3'],
+        text=f"{last['avg_o3']:.1f}", showarrow=True, arrowhead=2
+    )
+
+    # Pass JSON to template
+    return render_template(
+        'index.html',
+        fig1_json=fig1.to_json(),
+        fig2_json=fig2.to_json(),
+        fig3_json=fig3.to_json()
+    )
+
+if __name__ == '__main__':
+    app.run(debug=True)

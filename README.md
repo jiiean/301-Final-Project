@@ -5,6 +5,8 @@
 * [Acknowledgments](./README.md#Acknowledgments)
 * [Project Summary](./README.md#Project-Summary)
 * [Contribution to SDGS](./README.md#Contribution-to-SDGS)
+* [Demo Video](./README.md#Demo-Video)
+* [Final Poster](./README.md#Final-Poster)
 * [Statement of Intellectual and Professional Growth](./README.md#Statement-of-Intellectual-and-Professional-Growth)
 * [Navigation Instructions](./README.md#Navigation-Instructions)
 
@@ -54,6 +56,7 @@ Our project and visualization focuses on the United Nations Sustainable Developm
 ## Demo Video:
 The following link shows a demonstration and explaination of all of our visualizations
 https://youtu.be/b9pA99xbZrI
+
 
 ## Final Poster:
 ![1381746645504_ pic_hd](https://github.com/user-attachments/assets/f8fba15f-5673-4107-9fb0-c3ac6dbdd62b)

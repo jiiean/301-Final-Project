@@ -22,6 +22,8 @@
 
 - **Instructor**: Luyao Zhang
 
+- **Dashboard Link:** https://asthma-dashboard.streamlit.app/
+
 - **Disclaimer:** This is the final project for INFOSCI 301 Data Visualization and Information Aesthetics, instructed by Prof. Luyao Zhang at Duke Kunshan University in Spring 2025
   
 ## Acknowledgments:

@@ -1,11 +1,14 @@
-
-# Air Quality Health Visualization
-
-This project presents a data visualization of the Asthma Prevlance Compared to Air Quality based on our pilot Data in counties around Maryland. It is created inside of google colab. The goal is to connect air pollution data to health conditions. 
+# **Air Quality and Health Disparities: A Multidimensional Analysis
+**
+## Project Information
 
 - **Authors:** Jiean Zhou and Nazirjon Ismoiljonov
 - **Course:** INFOSCI 301
 - **Instructor**: Luyao Zhang
+
+## Team Contribution Statement:
+- **Jiean:** Data sourcing, literature review, writing of academic report and GitHub
+- **NJ:** coding interactive visualizations, dashboard creation, poster creation
 
 ## Included Files:
 - Final_project_infosci_301.ipynb

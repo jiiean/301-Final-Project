@@ -41,18 +41,18 @@ From the individual InfoVis Redesign project, we became familiarized with the pr
 
 ## Navigation Instructions:
 - **Code for Simulations, Data Processing, and Visualizations**:
-  - Located in the [`Code/`](Code/README.md) directory.
+  - Located in the [`Code/`](Code/) directory.
   
 - **Sample Datasets or Processed Data**:
-  - Found in the [`Data/`](Data/README.md) folder.
+  - Found in the [`Data/`](Data/) folder.
   - Contains raw datasets used to create all of our visualizations
  
 - **Documentation for Dependencies and Environment Setup**:
-  - Detailed in the [`Docs/`](Docs/README.md) directory.
+  - Detailed in the [`Docs/`](Docs/) directory.
   - Includes documentation of our proposal, progress, and final academic report
 
 - **Visualizations**:
-  - Stored in the [`Visualizations/`](Visualizations/README.md) folder.
+  - Stored in the [`Visualizations/`](Visualizations/) folder.
   - Features screenshots of all of our key visualizations 
   
 

@@ -29,6 +29,8 @@ We would like to express our sincere gratitude to the following individuals and 
 
   - **Professor Luyao Zhang**, **Professor Ming-Chun Huang**, **David Schaff**, and **Dongping Liu** for their guidance, support, and valuable feedback throughout the course.
   - Our classmates in **INFOSCI 301** for fostering a collaborative and inspiring learning environment.
+
+
   - [**Google Colab**](https://colab.research.google.com/) for providing a cloud-based platform that enabled us to write, run, and share our code seamlessly.
   - [**Plotly**](https://plotly.com/python/) for the powerful and interactive visualization tools that helped us bring our data to life.
   - [**Streamlit**](https://streamlit.io/) for enabling us to transform our data analysis into an accessible and interactive dashboard.
@@ -46,6 +48,11 @@ Our project and visualization focuses on the United Nations Sustainable Developm
 ![image](https://github.com/user-attachments/assets/2bbb9bd3-4d47-4ed8-a8d9-472d27e66157)
 
 **Statement of Contribution:** Our project supports good health and well-being by visualizing the relationship between air quality and respiratory illnesses across different communities. By integrating environmental, health, and socioeconomic data, we help uncover patterns that inform equitable public health responses and raise awareness of environmental health risks
+
+## Demo Video:
+The following link shows a demonstration and explaination of all of our visualizations
+https://youtu.be/b9pA99xbZrI
+
 
 ## Statement of Intellectual and Professional Growth
 

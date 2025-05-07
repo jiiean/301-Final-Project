@@ -37,22 +37,24 @@ Our project and visualization focuses on the United Nations Sustainable Developm
 
 ## Statement of Intellectual and Professional Growth
 
-From the individual InfoVis Redesign project, we became familiarized with the process of creating visualizations and its supporting resources like posters, reports, and creating a github. We shared our strengths and weaknesses from the project to give ourselves the best roles to create the best visualization for our final project. The in-class activities improved our understanding and gave practice for our visualization and gave ideas of inspiration for our final project. The final session with feedback was also very helpful. Group 2 told us the importance of color scheme and clarity and was something we kept in mind throughout our final process. The symposium improved our presentation skills and provided valuable feedback that we can take with us to our final project. From the Zhou Zhuang Mysterious Life Museum our group saw visualizations could be used in a real case and the importance visualizations have in the day to day and in academic fields.  
+This project built upon our skills developed in the individual InfoVis Redesign project, where we gained experience in crafting visualizations, writing technical reports, and managing GitHub repositories. By assessing our strengths and delegating roles accordingly, we worked efficiently as a team.
+
+Classroom activities and peer critiques (especially from Group 2) enhanced our understanding of design clarity and color theory. The symposium further improved our presentation skills and gave us constructive feedback that we applied in the final stages. Our visit to the Zhou Zhuang Mysterious Life Museum showed us the real-world impact of effective visual storytelling, which inspired elements of our final visualization.
 
 ## Navigation Instructions:
 - **Code for Simulations, Data Processing, and Visualizations**:
-  - Located in the [`Code/`](Code/) directory.
+  - Located in the [`code`](./code/) directory.
   
 - **Sample Datasets or Processed Data**:
-  - Found in the [`Data/`](Data/) folder.
+  - Found in the [`data/`](./data/) folder.
   - Contains raw datasets used to create all of our visualizations
  
 - **Documentation for Dependencies and Environment Setup**:
-  - Detailed in the [`Docs/`](Docs/) directory.
+  - Detailed in the [`docs/`](./docs/) directory.
   - Includes documentation of our proposal, progress, and final academic report
 
 - **Visualizations**:
-  - Stored in the [`Visualizations/`](Visualizations/) folder.
+  - Stored in the [`visualizations/`](./visualizations/) folder.
   - Features screenshots of all of our key visualizations 
   
 

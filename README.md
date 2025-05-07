@@ -24,6 +24,7 @@
 
 ## Contribution to SDGS:
 Our project and visualization focuses on the United Nations Sustainable Development Goal 3 of Good Health and Well-Being
+
 ![image](https://github.com/user-attachments/assets/2bbb9bd3-4d47-4ed8-a8d9-472d27e66157)
 
 **Statement of Contribution:** Our project supports good health and well-being by visualizing the relationship between air quality and respiratory illnesses across different communities. By integrating environmental, health, and socioeconomic data, we help uncover patterns that inform equitable public health responses and raise awareness of environmental health risks

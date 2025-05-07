@@ -1,5 +1,5 @@
-# **Air Quality and Health Disparities: A Multidimensional Analysis
-**
+# **Air Quality and Health Disparities: A Multidimensional Analysis**
+
 ## Project Information
 
 - **Authors:** Jiean Zhou and Nazirjon Ismoiljonov

@@ -79,7 +79,8 @@ Classroom activities and peer critiques (especially from Group 2) enhanced our u
 - **Documentation for Dependencies and Environment Setup**:
   - Detailed in the [`docs/`](./docs/) directory.
   - Includes documentation of our proposal, progress, and final academic report
-
+  - Includes instructions on how to run the code, use the required dependancies, and enviornment set up
+    
 - **Visualizations**:
   - Stored in the [`visualizations/`](./visualizations/) folder.
   - Features screenshots of all of our key visualizations 

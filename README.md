@@ -5,7 +5,7 @@
 
 ---
 
-## [`Project Information/`](Project-Information/README.md)
+## Project Information
 
 - **Authors:** Jiean Zhou and Nazirjon Ismoiljonov
   

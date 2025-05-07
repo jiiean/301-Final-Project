@@ -3,7 +3,7 @@
 ## **Table of Contents**
 * [Project Information](./README.md#Project-Information)
 * [Contribution to SDGS](./README.md#Contribution-to-SDGS)
-*  [Statement of Intellectual and Professional Growth](./README.md#Statement-of-Intellectual-and-Professional Growth)
+*  [Statement of Intellectual and Professional Growth](./README.md#Statement-of-Intellectual-and-Professional-Growth)
 
 ---
 

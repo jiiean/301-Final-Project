@@ -40,10 +40,20 @@ Our project and visualization focuses on the United Nations Sustainable Developm
 From the individual InfoVis Redesign project, we became familiarized with the process of creating visualizations and its supporting resources like posters, reports, and creating a github. We shared our strengths and weaknesses from the project to give ourselves the best roles to create the best visualization for our final project. The in-class activities improved our understanding and gave practice for our visualization and gave ideas of inspiration for our final project. The final session with feedback was also very helpful. Group 2 told us the importance of color scheme and clarity and was something we kept in mind throughout our final process. The symposium improved our presentation skills and provided valuable feedback that we can take with us to our final project. From the Zhou Zhuang Mysterious Life Museum our group saw visualizations could be used in a real case and the importance visualizations have in the day to day and in academic fields.  
 
 ## Navigation Instructions:
-- Final_project_infosci_301.ipynb
-   - google colab code 
-- proposal.pdf
-   - proposal on research topic, questions, and data
+- **Code for Simulations, Data Processing, and Visualizations**:
+  - Located in the [`Code/`](Code/README.md) directory.
+  
+- **Sample Datasets or Processed Data**:
+  - Found in the [`Data/`](Data/README.md) folder.
+  - Contains raw datasets used to create all of our visualizations
+ 
+- **Documentation for Dependencies and Environment Setup**:
+  - Detailed in the [`Docs/`](Docs/README.md) directory.
+  - Includes documentation of our proposal, progress, and final academic report
+
+- **Visualizations**:
+  - Stored in the [`Visualizations/`](Visualizations/README.md) folder.
+  - Features screenshots of all of our key visualizations 
   
 
 

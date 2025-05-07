@@ -22,7 +22,33 @@
 
 - **Disclaimer:** This is the final project for INFOSCI 301 Data Visualization and Information Aesthetics, instructed by Prof. Luyao Zhang at Duke Kunshan University in Spring 2025
   
-- **Acknowledgments**:  Special thanks to Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, Dongping Liu, and to all our classmates in INFOSCI 301 for creating a great learning enviorment
+- **Acknowledgments**:
+We would like to express our sincere gratitude to the following individuals and platforms that made this project possible:
+
+- **Professor Luyao Zhang**, **Professor Ming-Chun Huang**, **David Schaff**, and **Dongping Liu** for their guidance, support, and valuable feedback throughout the course.
+- Our classmates in **INFOSCI 301** for fostering a collaborative and inspiring learning environment.
+- [**Google Colab**](https://colab.research.google.com/) for providing a cloud-based platform that enabled us to write, run, and share our code seamlessly.
+- [**Plotly**](https://plotly.com/python/) for the powerful and interactive visualization tools that helped us bring our data to life.
+- [**Streamlit**](https://streamlit.io/) for enabling us to transform our data analysis into an accessible and interactive dashboard.
+- [**GitHub**](https://github.com/) for version control and project hosting, which helped us document our process and collaborate effectively.
+- [**ChatGPT**](https://openai.com/chatgpt) for assisting with writing guidance, brainstorming, and technical questions during the development process.
+
+
+Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, and Dongping Liu for their guidance, support, and valuable feedback throughout the course.
+
+Our classmates in INFOSCI 301 for fostering a collaborative and inspiring learning environment.
+
+Google Colab for providing a cloud-based platform that enabled us to write, run, and share our code seamlessly.
+
+Plotly for the powerful and interactive visualization tools that helped us bring our data to life.
+
+Streamlit for enabling us to transform our data analysis into an accessible and interactive dashboard.
+
+GitHub for version control and project hosting, which helped us document our process and collaborate effectively.
+
+ChatGPT for assisting with writing guidance, brainstorming, and technical questions during the development process.
+
+
 
 - **Project Summary:**
 
@@ -43,7 +69,7 @@ Classroom activities and peer critiques (especially from Group 2) enhanced our u
 
 ## Navigation Instructions:
 - **Code for Simulations, Data Processing, and Visualizations**:
-  - Located in the [`code`](./code/) directory.
+  - Located in the [`code/`](./code/) directory.
   
 - **Sample Datasets or Processed Data**:
   - Found in the [`data/`](./data/) folder.

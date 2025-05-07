@@ -22,7 +22,11 @@
 
 - **Disclaimer:** This is the final project for INFOSCI 301 Data Visualization and Information Aesthetics, instructed by Prof. Luyao Zhang at Duke Kunshan University in Spring 2025
   
-- **Acknowledgments**:  Special thanks to Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, Dongping Liu, and to all our classmates in INFOSCI 301 for creating a great learning enviorment 
+- **Acknowledgments**:  Special thanks to Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, Dongping Liu, and to all our classmates in INFOSCI 301 for creating a great learning enviorment
+
+- **Project Summary:**:
+
+<img width="370" alt="Screenshot 2025-05-07 at 10 31 19 PM" src="https://github.com/user-attachments/assets/f1ff2ea3-dab0-4b2f-b6fc-2b153646d1a2" />
 
 ## Contribution to SDGS:
 Our project and visualization focuses on the United Nations Sustainable Development Goal 3 of Good Health and Well-Being.

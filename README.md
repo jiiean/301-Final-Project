@@ -5,6 +5,9 @@
 - **Authors:** Jiean Zhou and Nazirjon Ismoiljonov
 - **Course:** INFOSCI 301
 - **Instructor**: Luyao Zhang
+- **Disclaimer:** This is the final project for INFOSCI 301 Data Visualization and Information Aesthetics, instructed by Prof. Luyao Zhang at Duke Kunshan University in Spring 2025
+- **Acknowledgments**:  Special thanks to Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, Dongping Liu, and to all our classmates in INFOSCI 301 for creating a great learning enviorment 
+
 
 ## Team Contribution Statement:
 - **Jiean:** Data sourcing, literature review, writing of academic report and GitHub

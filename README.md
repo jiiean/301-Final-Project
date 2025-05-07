@@ -24,7 +24,7 @@
   
 - **Acknowledgments**:  Special thanks to Professor Luyao Zhang, Professor Ming-Chun Huang, David Schaff, Dongping Liu, and to all our classmates in INFOSCI 301 for creating a great learning enviorment
 
-- **Project Summary:**:
+- **Project Summary:**
 
 <img width="370" alt="Screenshot 2025-05-07 at 10 31 19 PM" src="https://github.com/user-attachments/assets/f1ff2ea3-dab0-4b2f-b6fc-2b153646d1a2" />
 
